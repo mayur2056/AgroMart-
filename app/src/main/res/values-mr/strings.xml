@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">बायनाऊ</string>
+    <string name="hello_blank_fragment">हॅलो ब्लॅंकर फ्रॅगमेंट</string>
+    <string name="new_product">नवीन</string>
+    <string name="card_number">* * * * * * * * * * * * 3947</string>
+    <string name="card_holder_name">कार्डधारकाचे नाव</string>
+    <string name="expiry_date">समाप्तीची तारीख</string>
+    <string name="use_as_default_payment_method">डिफॉल्ट पेमेंट पद्धती म्हणून वापरा</string>
+    <string name="payment_methods">पेमेंट पद्धती</string>
+    <string name="add_new_card">नवीन कार्ड जोडा</string>
+    <string name="add_card">कार्ड जोडा</string>
+    <string name="empty_favourite">रिकामे आवडते</string>
+    <string name="add_to_bag">बॅगमध्ये जोडा</string>
+    <string name="card_number_star">**** **** **** </string>
+
+</resources>

@@ -1,0 +1,268 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".presentation.activity.SignUpActivity">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top_background" />
+
+    <!-- Sign Up Title -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Sign up"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- ScrollView for Form Fields -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/imageView3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Full Name Field -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full Name :"
+                android:textColor="@color/mainText"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/nameEt_signUpPage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:drawableRight="@null"
+                android:paddingRight="20dp"
+                android:textColor="@color/mainText"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/metropolis_regular"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:maxLines="1"/>
+
+            <!-- Email Field -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email :"
+                android:textColor="@color/mainText"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/emailEt_signUpPage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="15sp"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:drawableRight="@null"
+                android:paddingRight="20dp"
+                android:textColor="@color/mainText"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/metropolis_regular"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"/>
+
+            <!-- Phone Number Field -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone No :"
+                android:textColor="@color/mainText"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/phoneEt_signUpPage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/mainText"
+                android:drawableRight="@null"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/metropolis_regular"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:maxLines="1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password :"
+                android:textColor="@color/mainText"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+            <!-- Password Field -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                android:id="@+id/PassEt_signUpPage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="15sp"
+                android:textColor="@color/mainText"
+                android:drawableRight="@null"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/metropolis_regular"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1"/>
+
+                <ImageView
+                    android:id="@+id/togglePasswordVisibility"
+                    android:layout_width="51dp"
+                    android:layout_height="29dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_visibility_off" />
+
+            </RelativeLayout>
+
+            <!-- Confirm Password Field -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirm Password :"
+                android:textStyle="bold"
+                android:textColor="@color/mainText"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/cPassEt_signUpPage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/mainText"
+                android:drawableRight="@null"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/metropolis_regular"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:maxLines="1"/>
+
+                <ImageView
+                    android:id="@+id/toggleConfirmPasswordVisibility"
+                    android:layout_width="51dp"
+                    android:layout_height="29dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:src="@drawable/ic_visibility_off" />
+
+            </RelativeLayout>
+
+            <!-- User Type Spinner -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Customer or Farmer :"
+                android:textColor="@color/mainText"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:id="@+id/userTypeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_background"
+                android:paddingLeft="20dp"
+                android:textColor="@color/mainText"/>
+
+            <!-- Sign Up Button -->
+            <Button
+                android:id="@+id/signUpBtn_signUpPage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_bg"
+                android:text="Sign Up"
+                android:layout_marginTop="40dp"
+                android:elevation="10dp"/>
+
+            <!-- Sign In Link -->
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:text="Have an Account? "
+                    android:textColor="@color/mainText"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/signInTv_signUpPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:text=" Sign in"
+                    android:textColor="@color/primary"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

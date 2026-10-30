@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "687066321185",
+    "project_id": "agriecommerce-39d52",
+    "storage_bucket": "agriecommerce-39d52.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687066321185:android:dc931504afc9d2cdf5ae60",
+        "android_client_info": {
+          "package_name": "com.example.agriecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-Sk032n-D4HVQsG8oSDCU8Fp2D9if39M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

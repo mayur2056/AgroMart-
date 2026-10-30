@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.agriecommerce">
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- If targeting Android 12 (API 31+) and using Bluetooth/Wi-Fi scanning -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation" />
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BuyNow">
+        <activity
+            android:name=".presentation.activity.UploadFarmerDocumentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.activity.DeliveryViewDeliveredActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.activity.DeliveryHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.activity.FullScreenImageActivity"
+            android:exported="false" /> <!-- MainActivity should be the launcher activity -->
+        <activity
+            android:name=".presentation.activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".presentation.activity.ChatActivity" /> <!-- LanguageChoiceActivity should not have the MAIN action -->
+        <activity
+            android:name=".presentation.activity.LanguageChoiceActivity"
+            android:exported="true"
+            android:launchMode="singleTop" /> <!-- Other activities -->
+        <activity android:name=".presentation.activity.LoginActivity" />
+        <activity android:name=".presentation.activity.AdminActivity" />
+        <activity android:name=".presentation.activity.FarmerActivity" />
+        <activity android:name=".presentation.activity.SignUpActivity" />
+        <activity android:name=".presentation.activity.HomeActivity" />
+        <activity android:name=".presentation.activity.ProductDetailsActivity" />
+        <activity android:name=".presentation.activity.CustomerDetailsActivity" /> <!-- <receiver -->
+        <!-- android:name="com.razorpay.AutoReadSmsReceiver" -->
+        <!-- android:exported="true" -->
+        <!-- android:permission="android.permission.BROADCAST_SMS" -->
+        <!-- tools:ignore="MissingClass"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.provider.Telephony.SMS_RECEIVED" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <activity android:name=".presentation.activity.OrderActivity" />
+        <activity android:name=".presentation.activity.ChatAdminActivity" />
+        <activity android:name=".presentation.activity.ChatUserActivity" />
+        <activity android:name=".presentation.activity.AdminUserListActivity" />
+    </application>
+
+</manifest>

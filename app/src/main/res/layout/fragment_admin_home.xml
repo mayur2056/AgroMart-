@@ -1,0 +1,78 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainScrollView_homeFrag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".presentation.fragment.HomeFragment">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/MainLayout_homeFrag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Search Bar at the Top -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:queryHint="Search products..."
+        app:iconifiedByDefault="false"
+        android:background="@drawable/search_background"/>
+
+        <!-- Message Icon -->
+
+        <!-- New Products Section -->
+
+
+        <LinearLayout
+            android:id="@+id/newLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/searchView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/newRecView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:listitem="@layout/single_product_admin" />
+        </LinearLayout>
+
+        <!-- Sale Layout -->
+        <LinearLayout
+            android:id="@+id/saleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/newLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/newRecView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone" /> <!-- Initially hidden -->
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

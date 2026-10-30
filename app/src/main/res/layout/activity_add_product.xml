@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".presentation.fragment.ProductUploadFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:orientation="vertical"
+        android:divider="@android:color/transparent"
+        android:showDividers="middle"
+        android:dividerPadding="12dp">
+
+        <!-- Image Upload Section -->
+        <ImageView
+            android:id="@+id/productImagePreview"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_shopping_cart"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/uploadImageBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Upload Image"
+            android:background="@drawable/btn_bg"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Product Name -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Name :"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:textSize="16sp"/>
+        <EditText
+            android:id="@+id/productNameEt"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Product Name"
+            android:paddingLeft="12dp"
+            android:textSize="16sp"/>
+
+        <!-- Product Price -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price :"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:textSize="16sp"/>
+        <EditText
+            android:id="@+id/productPriceEt"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Price"
+            android:paddingLeft="12dp"
+            android:textSize="16sp"
+            android:inputType="numberDecimal" />
+
+        <!-- Total Quantity (kg) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Quantity :"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:textSize="16sp"/>
+        <EditText
+            android:id="@+id/productQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Total Quantity (kg)"
+            android:paddingLeft="12dp"
+            android:textSize="16sp"
+            android:inputType="numberDecimal" />
+
+        <!-- Farm Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Farmer Name :"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:textSize="16sp"/>
+        <EditText
+            android:id="@+id/farmNameEt"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Farm Name"
+            android:paddingLeft="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Product Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description :"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:textSize="16dp"/>
+        <EditText
+            android:id="@+id/productDescriptionEt"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Description"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:gravity="top"
+            android:inputType="textMultiLine"/>
+
+        <!-- Product Category (Spinner) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category :"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:textSize="16sp"/>
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/edit_text_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submitProductBtn"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Upload Product"
+            android:background="@drawable/btn_bg"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

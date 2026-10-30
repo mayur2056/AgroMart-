@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Toolbar-like Header -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/primary"
+        android:padding="10dp"
+        app:title="User Chats"
+        app:titleTextColor="@android:color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:elevation="4dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        android:layout_margin="16dp"
+        android:padding="10dp"
+        android:background="@android:color/white"
+        app:cardBackgroundColor="@android:color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="User Chats"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="611dp"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

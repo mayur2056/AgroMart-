@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Users"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="5dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@android:color/darker_gray"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Messages"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="5dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messageRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/messageInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Type a message..."
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"
+            android:minHeight="48dp"/>
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:padding="10dp"/>
+    </LinearLayout>
+</LinearLayout>

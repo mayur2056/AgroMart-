@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "155947405292",
+    "firebase_url": "https://agrieccomerece-default-rtdb.firebaseio.com",
+    "project_id": "agrieccomerece",
+    "storage_bucket": "agrieccomerece.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155947405292:android:11d52493d40c15d6757ac9",
+        "android_client_info": {
+          "package_name": "com.example.agriecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcaCsZ4yAfJ5xbfxsDnuQ3-Vc9ujeZHxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
